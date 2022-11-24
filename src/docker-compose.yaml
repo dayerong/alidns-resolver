@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  alidns-resolver:
+    container_name: alidns-resolver
+    restart: always
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - ~/conf.yaml:/app/config/conf.yaml
+    build:
+      context: .
+      dockerfile: Dockerfile

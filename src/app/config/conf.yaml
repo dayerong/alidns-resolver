@@ -1,0 +1,16 @@
+logging:
+  logformat: "%(asctime)s - %(levelname)s - %(name)s - %(message)s"
+  file: ./logs/app.log
+  datefmt: "%Y-%m-%d %H:%M:%S"
+accesskey:
+  id: #accesskey id
+  secret: #accesskey secret
+domain:
+  # 此域名需在阿里云DNS解析管理中已存在
+  - docs.yao.com
+  - www.yao.com
+job:
+  trigger_type: interval
+  name: DNS动态解析
+  schedule_time:
+    minutes: 1
